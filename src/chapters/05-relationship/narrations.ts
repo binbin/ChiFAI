@@ -1,0 +1,24 @@
+/**
+ * narrations.ts — relationship 章节口播文本
+ *
+ * 每个 string = 该 step 的口播内容（来自 script.md 对应段落）
+ * 数组长度 = 章节代码里 if (step === N) 用到的最大 N + 1
+ */
+export const narrations: string[] = [
+  // step 0
+  "我们用一个时间轴，来看清整个AI工程的发展脉络，以及赤峰人社在每个阶段的实践。",
+  // step 1
+  "2023年，Prompt Engineering。大家都在研究怎么把话说对，让模型更好地回答问题。我们赤峰人社最初也是从这个阶段起步，用简单的提示词实现政策问答。",
+  // step 2
+  "2024年，RAG Engineering。大家发现Prompt再牛，也不知道企业内部文档。于是出现向量数据库、知识库。我们赤峰人社开始构建人社领域的知识库，整理政策文件和业务规则。",
+  // step 3
+  "2025年，Context Engineering。Anthropic把这个概念带火，大家发现Prompt只是Context的一部分。我们赤峰人社在这个阶段开发了AI预审系统，通过业务抓取、业务规则、AI分析，实现了一键批量预审。",
+  // step 4
+  "2025-2026年，Agent Engineering。Claude Code、Codex、Cursor出现后，重点从怎么回答变成怎么完成任务。我们赤峰人社开发了赤AI人社智能体，基于RAG的知识库问答，通过MCP接入岗位和培训推荐。",
+  // step 5
+  "2026年，Agentic Systems。OpenClaw、Hermes等项目出现后，Agent不再是一个程序，而是一个数字员工。我们赤峰人社在这个阶段探索了GovClaw自主Agent，实现了自主决策、文档生成、多步骤任务执行。",
+  // step 6
+  "2026年以后，Harness Engineering和Self-Improving Agents。未来竞争的是权限系统、安全系统、多Agent编排、Memory系统。我们赤峰人社正在向这个方向探索，目标是构建更稳定、更可靠的AI系统。",
+  // step 7
+  "真正决定上限的可能是模型，但真正决定能不能落地、能不能稳定交付的，就是Harness。这就是我们赤峰人社在AI应用方面的探索和实践。谢谢大家。",
+];

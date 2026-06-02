@@ -1,0 +1,532 @@
+/* Harness.css — 第4章：Harness Engineering */
+
+/* ===== 共享基础 ===== */
+.hn-chapter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Step 0: 标题 ===== */
+.hn-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: hn-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-title__num {
+  font-size: 108px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.hn-title__main {
+  font-family: var(--font-display-en);
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.hn-title__zh {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.hn-title__line {
+  width: 120px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 24px;
+  animation: hn-line-grow 400ms 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== Step 1: 词源 ===== */
+.hn-etymology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  animation: hn-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-etymology__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-etymology__word {
+  font-family: var(--font-display-en);
+  font-size: 144px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.hn-etymology__meanings {
+  display: flex;
+  gap: 36px;
+}
+
+.hn-etymology__meaning {
+  font-family: var(--font-body);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 18px 36px;
+  border: 2px solid var(--rule);
+  animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== Step 2: 核心理念 ===== */
+.hn-concept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: hn-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-concept__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-concept__text {
+  font-family: var(--font-display-cn);
+  font-size: 60px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+}
+
+.hn-concept__accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hn-concept__sub {
+  font-family: var(--font-body);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.hn-concept__highlight {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ===== Step 3: 核心差异 ===== */
+.hn-diff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  animation: hn-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-diff__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-diff__compare {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+.hn-diff__old,
+.hn-diff__new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 48px 72px;
+  border: 2px solid var(--rule);
+}
+
+.hn-diff__old-label,
+.hn-diff__new-label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--text-mute);
+}
+
+.hn-diff__old-text {
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.hn-diff__vs {
+  font-family: var(--font-display-en);
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+
+.hn-diff__new-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hn-diff__new-item {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== Step 4: 六层架构 ===== */
+.hn-layers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hn-layers__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-layers__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.hn-layers__item {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 30px 48px;
+  border: 2px solid var(--rule);
+  animation: hn-layer-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-layers__num {
+  font-family: var(--font-mono);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--accent);
+  width: 72px;
+}
+
+.hn-layers__name {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ===== Step 5-7: 六层详解 ===== */
+.hn-detail1,
+.hn-detail2,
+.hn-detail3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1350px;
+}
+
+.hn-detail1__label,
+.hn-detail2__label,
+.hn-detail3__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-detail1__items,
+.hn-detail2__items,
+.hn-detail3__items {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
+}
+
+.hn-detail1__item,
+.hn-detail2__item,
+.hn-detail3__item {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 48px;
+  border: 2px solid var(--rule);
+  animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-detail1__num,
+.hn-detail2__num,
+.hn-detail3__num {
+  font-family: var(--font-mono);
+  font-size: 54px;
+  font-weight: 500;
+  color: var(--accent);
+  width: 90px;
+}
+
+.hn-detail1__content,
+.hn-detail2__content,
+.hn-detail3__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hn-detail1__title,
+.hn-detail2__title,
+.hn-detail3__title {
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hn-detail1__desc,
+.hn-detail2__desc,
+.hn-detail3__desc {
+  font-family: var(--font-body);
+  font-size: 27px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+/* ===== Step 8: GovClaw ===== */
+.hn-govclaw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: hn-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-govclaw__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-govclaw__title {
+  font-family: var(--font-display-en);
+  font-size: 108px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.hn-govclaw__url {
+  font-family: var(--font-mono);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-mute);
+}
+
+.hn-govclaw__desc {
+  font-family: var(--font-body);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ===== Step 9: 四项能力 ===== */
+.hn-ability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.hn-ability__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-ability__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  width: 100%;
+}
+
+.hn-ability__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 48px;
+  border: 2px solid var(--rule);
+  animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-ability__num {
+  font-family: var(--font-mono);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.hn-ability__title {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hn-ability__desc {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-mute);
+}
+
+/* ===== Step 10: 总结 ===== */
+.hn-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  animation: hn-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-summary__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-summary__boxes {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+.hn-summary__old,
+.hn-summary__new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 48px 72px;
+  border: 3px solid var(--rule);
+}
+
+.hn-summary__old-label,
+.hn-summary__new-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.hn-summary__old-text {
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.hn-summary__new-text {
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ===== Animations ===== */
+@keyframes hn-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hn-line-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes hn-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hn-layer-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

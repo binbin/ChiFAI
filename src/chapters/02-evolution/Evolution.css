@@ -1,0 +1,489 @@
+/* Evolution.css — 第2章：AI工程六代演进 */
+
+/* ===== 共享基础 ===== */
+.ev-chapter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Step 0: 时间轴引入 ===== */
+.ev-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: ev-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-intro__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ev-intro__text {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ev-intro__sub {
+  font-family: var(--font-body);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.ev-intro__accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ===== Step 1-12: 六代演进 ===== */
+.ev-generation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: ev-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  max-width: 1400px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.ev-generation--split {
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+}
+
+.ev-generation__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.ev-generation__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.ev-generation__header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.ev-generation__num {
+  font-family: var(--font-display-cn);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+
+.ev-generation__time {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-mute);
+  letter-spacing: 0.1em;
+}
+
+.ev-generation__title {
+  font-family: var(--font-display-en);
+  font-size: 54px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+.ev-generation__subtitle {
+  font-family: var(--font-display-cn);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.ev-generation__focus {
+  font-family: var(--font-body);
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.ev-generation__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 1000px;
+  margin-top: 12px;
+}
+
+.ev-generation__item {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 12px 24px;
+  border: 2px solid var(--rule);
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-generation__loop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ev-generation__arrow {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.ev-generation__loop-item {
+  font-family: var(--font-display-en);
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--text);
+  padding: 8px 24px;
+  border: 2px solid var(--rule);
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  min-width: 200px;
+  text-align: center;
+}
+
+.ev-generation__essence {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-2);
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ===== 实践案例 ===== */
+.ev-generation__practice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 24px 36px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent-soft);
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-generation__practice-label {
+  font-family: var(--font-display-cn);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+
+.ev-generation__practice-content {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ev-generation__practice-flow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.ev-generation__flow-item {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 12px 24px;
+  border: 2px solid var(--rule);
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-generation__flow-plus {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ev-generation__practice-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.ev-generation__practice-item {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 8px 16px;
+  border-left: 3px solid var(--accent);
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== 示例展示 ===== */
+.ev-generation__demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.ev-generation__video {
+  width: 100%;
+  max-width: 900px;
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ev-generation__img {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ev-generation__screenshots {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ev-generation__screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-generation__screenshot img {
+  width: 100%;
+  max-width: 350px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ev-generation__screenshot-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+}
+
+.ev-generation__demo-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+}
+
+.ev-generation__features {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.ev-generation__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 36px;
+  border: 2px solid var(--rule);
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-generation__feature-num {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ev-generation__feature-desc {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.ev-generation__url {
+  font-family: var(--font-mono);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 18px 36px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-generation__vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 24px 36px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-generation__vision-label {
+  font-family: var(--font-display-cn);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--text-mute);
+  letter-spacing: 0.2em;
+}
+
+.ev-generation__vision-content {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== Step 13: 结论 ===== */
+.ev-conclusion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  animation: ev-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ev-conclusion__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ev-conclusion__boxes {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+.ev-conclusion__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 48px 72px;
+  border: 3px solid var(--rule);
+}
+
+.ev-conclusion__box--highlight {
+  border-color: var(--accent);
+}
+
+.ev-conclusion__box-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.ev-conclusion__box-title {
+  font-family: var(--font-display-cn);
+  font-size: 54px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ev-conclusion__box--highlight .ev-conclusion__box-title {
+  color: var(--accent);
+}
+
+.ev-conclusion__vs {
+  font-family: var(--font-display-en);
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+
+.ev-conclusion__thanks {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--text-2);
+  margin-top: 36px;
+}
+
+/* ===== Animations ===== */
+@keyframes ev-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ev-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
