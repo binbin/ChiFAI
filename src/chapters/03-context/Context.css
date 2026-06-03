@@ -1,0 +1,818 @@
+/* Context.css — 第3章：Context Engineering */
+
+/* ===== 共享基础 ===== */
+.ct-chapter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Step 0: 标题 ===== */
+.ct-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-title__num {
+  font-size: 108px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.ct-title__main {
+  font-family: var(--font-display-en);
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.ct-title__zh {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.ct-title__line {
+  width: 120px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 24px;
+  animation: ct-line-grow 400ms 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== Step 1: 定义 ===== */
+.ct-def {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-def__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-def__text {
+  font-family: var(--font-display-cn);
+  font-size: 60px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+}
+
+.ct-def__accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.ct-def__items {
+  display: flex;
+  gap: 36px;
+}
+
+.ct-def__item {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 18px 36px;
+  border: 2px solid var(--rule);
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== Step 2: Scope ===== */
+.ct-scope {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-scope__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-scope__main {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-scope__sub {
+  font-family: var(--font-body);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.ct-scope__accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ===== Step 3: 8类信息源 ===== */
+.ct-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.ct-info__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-info__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.ct-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 36px;
+  border: 2px solid var(--rule);
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-info__num {
+  font-family: var(--font-mono);
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.ct-info__text {
+  font-family: var(--font-body);
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ===== Step 4: 核心原则 ===== */
+.ct-principle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-principle__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-principle__box {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 48px 72px;
+  border: 3px solid var(--accent);
+}
+
+.ct-principle__when,
+.ct-principle__what {
+  font-family: var(--font-display-cn);
+  font-size: 54px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ct-principle__plus {
+  font-family: var(--font-display-en);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.ct-principle__result {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ===== Step 5: Prompt ⊂ Context ===== */
+.ct-relation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-relation__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-relation__diagram {
+  position: relative;
+  width: 450px;
+  height: 450px;
+}
+
+.ct-relation__outer {
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ct-relation__outer-label {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-family: var(--font-display-en);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ct-relation__inner {
+  width: 50%;
+  height: 50%;
+  border: 3px solid var(--rule);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ct-relation__inner-label {
+  font-family: var(--font-display-en);
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.ct-relation__text {
+  font-family: var(--font-body);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+/* ===== Step 6: 过渡 ===== */
+.ct-transition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-transition__text {
+  font-family: var(--font-display-cn);
+  font-size: 54px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-transition__accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.ct-transition__apps {
+  display: flex;
+  gap: 72px;
+}
+
+.ct-transition__app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 48px 72px;
+  border: 2px solid var(--rule);
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-transition__app-num {
+  font-family: var(--font-mono);
+  font-size: 54px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.ct-transition__app-name {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ===== Step 7: 案例1标题 ===== */
+.ct-case1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case1__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case1__title {
+  font-family: var(--font-display-cn);
+  font-size: 96px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-case1__sub {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-mute);
+}
+
+/* ===== Step 8: 案例1核心思路 ===== */
+.ct-case1-idea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case1-idea__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case1-idea__flow {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.ct-case1-idea__item {
+  font-family: var(--font-body);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 24px 48px;
+  border: 2px solid var(--rule);
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case1-idea__plus {
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.ct-case1-idea__result {
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ===== Step 9: 案例1流程 ===== */
+.ct-case1-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case1-flow__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case1-flow__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.ct-case1-flow__item {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 36px 48px;
+  border: 2px solid var(--rule);
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case1-flow__num {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--accent);
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.ct-case1-flow__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ct-case1-flow__title {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ct-case1-flow__desc {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.ct-case1-flow__scope {
+  font-family: var(--font-body);
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 16px;
+}
+
+/* ===== Step 10: 案例2标题 ===== */
+.ct-case2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case2__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case2__title {
+  font-family: var(--font-display-cn);
+  font-size: 84px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-case2__type {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.ct-case2__features {
+  display: flex;
+  gap: 48px;
+  margin-top: 24px;
+}
+
+.ct-case2__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 36px 48px;
+  border: 2px solid var(--rule);
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case2__feature-num {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ct-case2__feature-desc {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ===== Step 11: 案例2入口 ===== */
+.ct-case2-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case2-entry__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case2-entry__platform {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ct-case2-entry__desc {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+/* ===== Animations ===== */
+@keyframes ct-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ct-line-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes ct-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ct-data-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== 案例1流程图片 ===== */
+.ct-case1-flow__img {
+  margin-top: 18px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case1-flow__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== 案例2示例图片 ===== */
+.ct-case2__examples {
+  display: flex;
+  gap: 36px;
+  margin-top: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ct-case2__example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case2__example img {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ct-case2__example-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+}
+
+/* ===== Step 12: 案例3标题 ===== */
+.ct-case3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case3__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case3__title {
+  font-family: var(--font-display-cn);
+  font-size: 84px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-case3__sub {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.ct-case3__examples {
+  display: flex;
+  gap: 36px;
+  margin-top: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ct-case3__example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case3__example img {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ct-case3__example-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+}
+
+/* ===== Step 13: 案例4标题 ===== */
+.ct-case4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case4__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case4__title {
+  font-family: var(--font-display-cn);
+  font-size: 84px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-case4__sub {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.ct-case4__examples {
+  display: flex;
+  gap: 36px;
+  margin-top: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ct-case4__example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case4__example img {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ct-case4__example-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+}
