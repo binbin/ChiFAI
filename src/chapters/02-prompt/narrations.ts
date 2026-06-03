@@ -6,7 +6,7 @@
  */
 export const narrations: string[] = [
   // step 0
-  "第一个阶段是Prompt Engineering，提示词工程。",
+  "第一个阶段是提示词工程。",
   // step 1
   "这是AI应用的基础。简单说，就是怎么跟AI有效沟通。",
   // step 2
@@ -22,5 +22,5 @@ export const narrations: string[] = [
   // step 7
   "说白了，提示词解决的是表达的问题，不是信息的问题。",
   // step 8
-  "这是一个Prompt Engineering的实际应用示例，展示了如何通过精心设计的提示词来引导AI生成我们想要的结果。",
+  "这是一个提示词工程的实际应用示例，展示了如何通过精心设计的提示词来引导AI生成我们想要的结果。",
 ];

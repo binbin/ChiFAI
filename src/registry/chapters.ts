@@ -3,6 +3,8 @@ import Intro from "../chapters/01-intro/Intro";
 import { narrations as introNarrations } from "../chapters/01-intro/narrations";
 import Evolution from "../chapters/02-evolution/Evolution";
 import { narrations as evolutionNarrations } from "../chapters/02-evolution/narrations";
+import Conclusion from "../chapters/03-conclusion/Conclusion";
+import { narrations as conclusionNarrations } from "../chapters/03-conclusion/narrations";
 
 /**
  * Order = order of presentation.
@@ -27,5 +29,11 @@ export const CHAPTERS: ChapterDef[] = [
     title: "AI工程六代演进",
     narrations: evolutionNarrations,
     Component: Evolution,
+  },
+  {
+    id: "conclusion",
+    title: "致谢",
+    narrations: conclusionNarrations,
+    Component: Conclusion,
   },
 ];

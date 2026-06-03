@@ -21,8 +21,8 @@ interface ContextProps {
  * 9: 案例1四项能力
  * 10: 案例2："赤AI人社"智能体
  * 11: 案例2数据1
- * 12: 案例2数据2
- * 13: 案例2数据3
+ * 12: 案例3：工伤鉴定AI辅助系统
+ * 13: 案例4：就业岗位数字人讲解
  */
 const Context: React.FC<ContextProps> = ({ step }) => {
   return (
@@ -131,7 +131,7 @@ const Context: React.FC<ContextProps> = ({ step }) => {
       {step === 6 && (
         <div className="ct-transition">
           <div className="ct-transition__text">
-            在这个阶段，我们做了<span className="ct-transition__accent">两个重点应用</span>
+            在这个阶段，我们做了<span className="ct-transition__accent">多个应用</span>
           </div>
           <div className="ct-transition__apps">
             <div className="ct-transition__app" style={{ animationDelay: "200ms" }}>
@@ -141,6 +141,14 @@ const Context: React.FC<ContextProps> = ({ step }) => {
             <div className="ct-transition__app" style={{ animationDelay: "400ms" }}>
               <div className="ct-transition__app-num">02</div>
               <div className="ct-transition__app-name">"赤AI人社"智能体</div>
+            </div>
+            <div className="ct-transition__app" style={{ animationDelay: "600ms" }}>
+              <div className="ct-transition__app-num">03</div>
+              <div className="ct-transition__app-name">工伤鉴定AI辅助</div>
+            </div>
+            <div className="ct-transition__app" style={{ animationDelay: "800ms" }}>
+              <div className="ct-transition__app-num">04</div>
+              <div className="ct-transition__app-name">就业岗位数字人讲解</div>
             </div>
           </div>
         </div>
@@ -235,6 +243,36 @@ const Context: React.FC<ContextProps> = ({ step }) => {
           <div className="ct-case2-entry__label">使用入口</div>
           <div className="ct-case2-entry__platform">微信公众号</div>
           <div className="ct-case2-entry__desc">全天候政策答疑服务</div>
+        </div>
+      )}
+
+      {/* Step 12: 案例3标题 */}
+      {step === 12 && (
+        <div className="ct-case3">
+          <div className="ct-case3__label">案例 03</div>
+          <div className="ct-case3__title">工伤鉴定AI辅助系统</div>
+          <div className="ct-case3__sub">OCR识别 + 大语言模型分析</div>
+          <div className="ct-case3__examples">
+            <div className="ct-case3__example">
+              <img src="/gs.png" alt="工伤鉴定AI辅助系统" />
+              <div className="ct-case3__example-label">AI模型配置界面</div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Step 13: 案例4标题 */}
+      {step === 13 && (
+        <div className="ct-case4">
+          <div className="ct-case4__label">案例 04</div>
+          <div className="ct-case4__title">就业岗位数字人讲解</div>
+          <div className="ct-case4__sub">数字人 + 语音合成 + 口型同步</div>
+          <div className="ct-case4__examples">
+            <div className="ct-case4__example">
+              <img src="/jy.png" alt="就业岗位数字人讲解" />
+              <div className="ct-case4__example-label">数字人岗位介绍</div>
+            </div>
+          </div>
         </div>
       )}
     </div>

@@ -10,7 +10,7 @@ export const narrations: string[] = [
   // step 1
   "如果从AI应用工程的发展脉络来看，大致可以分为六个阶段。",
   // step 2
-  '核心变化是什么？就是从"模型能用"，走向了"模型能干活"，再走向"模型能自己变强"。',
+  '核心变化是什么？就是从"模型能回答"，走向了"模型能干活"，再走向"模型能自己变强"。',
   // step 3
-  "从2023年的Prompt Engineering，到2024年的RAG Engineering，到2025年的Context Engineering，再到2025-2026年的Agent Engineering，然后到2026年的Agentic Systems / Harness Engineering，最后到2026年以后的Self-Improving Agents。每个阶段都在前一个基础上，扩展了AI的能力边界。",
+  "从2023年的提示词工程，到2024年的检索增强工程，到2025年的上下文工程，再到2025-2026年的智能体工程，然后到2026年的智能体系统工程，最后到2026年以后的自进化智能体。每个阶段都在前一个基础上，扩展了AI的能力边界。",
 ];

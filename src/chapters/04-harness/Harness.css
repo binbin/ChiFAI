@@ -205,7 +205,7 @@
   animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* ===== Step 4: 六层架构 ===== */
+/* ===== Step 4: 三件事 ===== */
 .hn-layers {
   display: flex;
   flex-direction: column;
@@ -255,81 +255,39 @@
   color: var(--text);
 }
 
-/* ===== Step 5-7: 六层详解 ===== */
-.hn-detail1,
-.hn-detail2,
-.hn-detail3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  width: 100%;
-  max-width: 1350px;
-}
-
-.hn-detail1__label,
-.hn-detail2__label,
-.hn-detail3__label {
-  font-family: var(--font-display-en);
-  font-size: 21px;
-  font-weight: 600;
-  letter-spacing: 0.4em;
-  color: var(--text-mute);
-  text-transform: uppercase;
-}
-
-.hn-detail1__items,
-.hn-detail2__items,
-.hn-detail3__items {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-  width: 100%;
-}
-
-.hn-detail1__item,
-.hn-detail2__item,
-.hn-detail3__item {
+/* ===== Step 5-7: 管住信息/行为/结果 ===== */
+.hn-detail {
   display: flex;
   align-items: center;
-  gap: 36px;
-  padding: 48px;
+  gap: 48px;
+  padding: 60px 80px;
   border: 2px solid var(--rule);
-  animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: hn-item-in 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.hn-detail1__num,
-.hn-detail2__num,
-.hn-detail3__num {
+.hn-detail__num {
   font-family: var(--font-mono);
-  font-size: 54px;
+  font-size: 72px;
   font-weight: 500;
   color: var(--accent);
-  width: 90px;
 }
 
-.hn-detail1__content,
-.hn-detail2__content,
-.hn-detail3__content {
+.hn-detail__content {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
-.hn-detail1__title,
-.hn-detail2__title,
-.hn-detail3__title {
+.hn-detail__title {
   font-family: var(--font-display-cn);
-  font-size: 42px;
+  font-size: 54px;
   font-weight: 700;
   color: var(--text);
 }
 
-.hn-detail1__desc,
-.hn-detail2__desc,
-.hn-detail3__desc {
+.hn-detail__desc {
   font-family: var(--font-body);
-  font-size: 27px;
+  font-size: 30px;
   font-weight: 500;
   color: var(--text-2);
 }
@@ -374,14 +332,14 @@
   color: var(--text);
 }
 
-/* ===== Step 9: 四项能力 ===== */
+/* ===== Step 9: GovClaw能力 ===== */
 .hn-ability {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
   width: 100%;
-  max-width: 1500px;
+  max-width: 900px;
 }
 
 .hn-ability__label {
@@ -393,44 +351,98 @@
   text-transform: uppercase;
 }
 
-.hn-ability__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.hn-ability__list {
+  display: flex;
+  flex-direction: column;
   gap: 36px;
   width: 100%;
 }
 
 .hn-ability__item {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 36px;
   padding: 48px;
   border: 2px solid var(--rule);
   animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.hn-ability__num {
-  font-family: var(--font-mono);
-  font-size: 42px;
-  font-weight: 500;
-  color: var(--accent);
-}
-
-.hn-ability__title {
+.hn-ability__icon {
   font-family: var(--font-display-cn);
   font-size: 36px;
   font-weight: 700;
+  color: var(--accent);
+  padding: 16px 24px;
+  border: 2px solid var(--accent);
+  min-width: 100px;
+  text-align: center;
+}
+
+.hn-ability__text {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 500;
   color: var(--text);
 }
 
-.hn-ability__desc {
-  font-family: var(--font-body);
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--text-mute);
+/* ===== Step 10-13: GovClaw演示 ===== */
+.hn-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: hn-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* ===== Step 10: 总结 ===== */
+.hn-demo__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.hn-demo__title {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.hn-demo__desc {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.hn-demo__example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: hn-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hn-demo__example img {
+  width: 100%;
+  max-width: 800px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hn-demo__example-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+  max-width: 800px;
+}
+
+/* ===== Step 14: 总结 ===== */
 .hn-summary {
   display: flex;
   flex-direction: column;

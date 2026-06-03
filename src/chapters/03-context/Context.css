@@ -688,3 +688,131 @@
   color: var(--text-2);
   text-align: center;
 }
+
+/* ===== Step 12: 案例3标题 ===== */
+.ct-case3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case3__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case3__title {
+  font-family: var(--font-display-cn);
+  font-size: 84px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-case3__sub {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.ct-case3__examples {
+  display: flex;
+  gap: 36px;
+  margin-top: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ct-case3__example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case3__example img {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ct-case3__example-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+}
+
+/* ===== Step 13: 案例4标题 ===== */
+.ct-case4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  animation: ct-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case4__label {
+  font-family: var(--font-display-en);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.ct-case4__title {
+  font-family: var(--font-display-cn);
+  font-size: 84px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ct-case4__sub {
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.ct-case4__examples {
+  display: flex;
+  gap: 36px;
+  margin-top: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ct-case4__example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: ct-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ct-case4__example img {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ct-case4__example-label {
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-align: center;
+}

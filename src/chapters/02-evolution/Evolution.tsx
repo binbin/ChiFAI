@@ -11,21 +11,25 @@ interface EvolutionProps {
  * 主线：六代演进 + 赤峰人社实践融入
  * 融合了原 Prompt、Context、Harness 章节的核心内容
  *
- * 14 steps:
+ * 18 steps:
  * 0: 时间轴引入
  * 1: 第一代 Prompt Engineering (2023) - 原理
  * 2: 第一代 Prompt Engineering (2023) - 赤峰人社实践
  * 3: 第二代 RAG Engineering (2024) - 原理
- * 4: 第二代 RAG Engineering (2024) - 赤峰人社实践（RAG + 赤AI人社智能体）
+ * 4: 第二代 RAG Engineering (2024) - 赤峰人社实践
  * 5: 第三代 Context Engineering (2025) - 原理
  * 6: 第三代 Context Engineering (2025) - 赤峰人社MCP示例
- * 7: 第四代 Agent Engineering (2025-2026) - 原理
- * 8: 第四代 Agent Engineering (2025-2026) - 赤峰人社AI预审
- * 9: 第五代 Agentic Systems (2026) - 原理
- * 10: 第五代 Agentic Systems (2026) - 赤峰人社GovClaw
- * 11: 第六代 Harness Engineering (2026+) - 原理
- * 12: 第六代 Harness Engineering (2026+) - 赤峰人社探索
- * 13: 结论
+ * 7: 第三代 Context Engineering (2025) - 工伤鉴定AI辅助
+ * 8: 第三代 Context Engineering (2025) - 就业岗位数字人讲解
+ * 9: 第四代 Agent Engineering (2025-2026) - 原理
+ * 10: 第四代 Agent Engineering (2025-2026) - 赤峰人社AI预审
+ * 11: 第五代 Agentic Systems (2026) - 原理
+ * 12: 第五代 Agentic Systems (2026) - GovClaw介绍
+ * 13: GovClaw演示 - 对话式业务办理
+ * 14: GovClaw演示 - 信息收集
+ * 15: GovClaw演示 - 文档生成与交付
+ * 16: 第六代 Harness Engineering (2026+) - 原理
+ * 17: 第六代 Harness Engineering (2026+) - 赤峰人社探索
  */
 const Evolution: React.FC<EvolutionProps> = ({ step }) => {
   return (
@@ -74,13 +78,6 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
             <div className="ev-generation__time">2023</div>
           </div>
           <div className="ev-generation__title">Prompt Engineering</div>
-          <div className="ev-generation__subtitle">赤峰人社实践</div>
-          <div className="ev-generation__practice">
-            <div className="ev-generation__practice-label">实践案例</div>
-            <div className="ev-generation__practice-content">
-              简单政策问答，用提示词引导AI回答人社问题
-            </div>
-          </div>
           <div className="ev-generation__demo">
             <video
               src="/prompt示例.mp4"
@@ -195,8 +192,56 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
         </div>
       )}
 
-      {/* Step 7: 第四代 Agent Engineering - 原理 */}
+      {/* Step 7: 第三代 Context Engineering - 工伤鉴定AI辅助 */}
       {step === 7 && (
+        <div className="ev-generation ev-generation--split">
+          <div className="ev-generation__left">
+            <div className="ev-generation__header">
+              <div className="ev-generation__num">第三代</div>
+              <div className="ev-generation__time">2025</div>
+            </div>
+            <div className="ev-generation__title">Context Engineering</div>
+            <div className="ev-generation__subtitle">赤峰人社实践 - 工伤鉴定AI辅助</div>
+            <div className="ev-generation__practice">
+              <div className="ev-generation__practice-label">技术方案</div>
+              <div className="ev-generation__practice-content">
+                OCR识别 + 大语言模型分析
+              </div>
+            </div>
+          </div>
+          <div className="ev-generation__right">
+            <img src="/gs.png" alt="工伤鉴定AI辅助系统" className="ev-generation__img" />
+            <div className="ev-generation__demo-label">AI模型配置界面</div>
+          </div>
+        </div>
+      )}
+
+      {/* Step 8: 第三代 Context Engineering - 就业岗位数字人讲解 */}
+      {step === 8 && (
+        <div className="ev-generation ev-generation--split">
+          <div className="ev-generation__left">
+            <div className="ev-generation__header">
+              <div className="ev-generation__num">第三代</div>
+              <div className="ev-generation__time">2025</div>
+            </div>
+            <div className="ev-generation__title">Context Engineering</div>
+            <div className="ev-generation__subtitle">赤峰人社实践 - 就业岗位数字人讲解</div>
+            <div className="ev-generation__practice">
+              <div className="ev-generation__practice-label">技术方案</div>
+              <div className="ev-generation__practice-content">
+                数字人 + 语音合成 + 口型同步
+              </div>
+            </div>
+          </div>
+          <div className="ev-generation__right">
+            <img src="/jy.png" alt="就业岗位数字人讲解" className="ev-generation__img" />
+            <div className="ev-generation__demo-label">数字人岗位介绍</div>
+          </div>
+        </div>
+      )}
+
+      {/* Step 9: 第四代 Agent Engineering - 原理 */}
+      {step === 9 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
             <div className="ev-generation__num">第四代</div>
@@ -221,8 +266,8 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
         </div>
       )}
 
-      {/* Step 8: 第四代 Agent Engineering - 赤峰人社AI预审 */}
-      {step === 8 && (
+      {/* Step 10: 第四代 Agent Engineering - 赤峰人社AI预审 */}
+      {step === 10 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
             <div className="ev-generation__num">第四代</div>
@@ -259,8 +304,8 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
         </div>
       )}
 
-      {/* Step 9: 第五代 Agentic Systems - 原理 */}
-      {step === 9 && (
+      {/* Step 11: 第五代 Agentic Systems - 原理 */}
+      {step === 11 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
             <div className="ev-generation__num">第五代</div>
@@ -282,8 +327,8 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
         </div>
       )}
 
-      {/* Step 10: 第五代 Agentic Systems - 赤峰人社GovClaw */}
-      {step === 10 && (
+      {/* Step 12: 第五代 Agentic Systems - GovClaw介绍 */}
+      {step === 12 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
             <div className="ev-generation__num">第五代</div>
@@ -293,25 +338,105 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           <div className="ev-generation__subtitle">赤峰人社实践 - GovClaw自主Agent</div>
           <div className="ev-generation__practice">
             <div className="ev-generation__practice-label">自主决策Agent</div>
-            <div className="ev-generation__practice-items">
-              {["记住对话历史和用户偏好", "自主生成文档、报告", "完成复杂的多步骤任务", "根据上下文自主判断下一步"].map((item, i) => (
-                <div key={i} className="ev-generation__practice-item" style={{ animationDelay: `${i * 100}ms` }}>
-                  {item}
-                </div>
-              ))}
+            <div className="ev-generation__practice-content">
+              能记住用户偏好，自主完成多步骤任务
             </div>
           </div>
           <div className="ev-generation__demo">
-            <div className="ev-generation__url">
-              govclaw.51chifeng.cn
-            </div>
+            <div className="ev-generation__url">govclaw.51chifeng.cn</div>
             <div className="ev-generation__demo-label">体验地址</div>
           </div>
         </div>
       )}
 
-      {/* Step 11: 第六代 Harness Engineering - 原理 */}
-      {step === 11 && (
+      {/* Step 13: GovClaw演示 - 对话式业务办理 */}
+      {step === 13 && (
+        <div className="ev-generation ev-generation--split">
+          <div className="ev-generation__left">
+            <div className="ev-generation__header">
+              <div className="ev-generation__num">第五代</div>
+              <div className="ev-generation__time">2026</div>
+            </div>
+            <div className="ev-generation__title">GovClaw</div>
+            <div className="ev-generation__subtitle">对话式业务办理</div>
+            <div className="ev-generation__practice">
+              <div className="ev-generation__practice-label">场景</div>
+              <div className="ev-generation__practice-content">
+                用户说想开一家包子铺，需要生成创业登记表
+              </div>
+            </div>
+          </div>
+          <div className="ev-generation__right">
+            <img src="/govclaw1.png" alt="GovClaw对话界面" className="ev-generation__img" />
+            <div className="ev-generation__demo-label">用户表达需求，AI理解并引导</div>
+          </div>
+        </div>
+      )}
+
+      {/* Step 14: GovClaw演示 - 信息收集 */}
+      {step === 14 && (
+        <div className="ev-generation ev-generation--split">
+          <div className="ev-generation__left">
+            <div className="ev-generation__header">
+              <div className="ev-generation__num">第五代</div>
+              <div className="ev-generation__time">2026</div>
+            </div>
+            <div className="ev-generation__title">GovClaw</div>
+            <div className="ev-generation__subtitle">信息收集与确认</div>
+            <div className="ev-generation__practice">
+              <div className="ev-generation__practice-label">能力</div>
+              <div className="ev-generation__practice-content">
+                AI主动询问必要信息，比如字号名称，确保生成的文档完整准确
+              </div>
+            </div>
+          </div>
+          <div className="ev-generation__right">
+            <img src="/govclaw2.png" alt="GovClaw信息收集" className="ev-generation__img" />
+            <div className="ev-generation__demo-label">AI主动询问，补全关键信息</div>
+          </div>
+        </div>
+      )}
+
+      {/* Step 15: GovClaw演示 - 文档生成与交付 */}
+      {step === 15 && (
+        <div className="ev-generation ev-generation--split">
+          <div className="ev-generation__left">
+            <div className="ev-generation__header">
+              <div className="ev-generation__num">第五代</div>
+              <div className="ev-generation__time">2026</div>
+            </div>
+            <div className="ev-generation__title">GovClaw</div>
+            <div className="ev-generation__subtitle">文档生成与成果交付</div>
+            <div className="ev-generation__practice">
+              <div className="ev-generation__practice-label">结果</div>
+              <div className="ev-generation__practice-content">
+                自动生成《个体工商户开业登记申请表》，用户可直接下载使用
+              </div>
+            </div>
+            <div className="ev-generation__vision">
+              <div className="ev-generation__vision-label">本质</div>
+              <div className="ev-generation__vision-content">
+                不是AI回答问题，而是AI替你干活
+              </div>
+            </div>
+          </div>
+          <div className="ev-generation__right">
+            <div className="ev-generation__screenshots">
+              <div className="ev-generation__screenshot">
+                <img src="/govclaw3.png" alt="GovClaw文档生成" />
+                <div className="ev-generation__screenshot-label">自动生成文档</div>
+              </div>
+              <div className="ev-generation__screenshot">
+                <img src="/govclaw4.png" alt="GovClaw成果交付" />
+                <div className="ev-generation__screenshot-label">下载使用</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Step 16: 第六代 Harness Engineering - 原理 */}
+      {step === 16 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
             <div className="ev-generation__num">第六代</div>
@@ -333,8 +458,8 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
         </div>
       )}
 
-      {/* Step 12: 第六代 Harness Engineering - 赤峰人社探索 */}
-      {step === 12 && (
+      {/* Step 17: 第六代 Harness Engineering - 赤峰人社探索 */}
+      {step === 17 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
             <div className="ev-generation__num">第六代</div>
@@ -357,24 +482,6 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
         </div>
       )}
 
-      {/* Step 13: 结论 */}
-      {step === 13 && (
-        <div className="ev-conclusion">
-          <div className="ev-conclusion__label">结论</div>
-          <div className="ev-conclusion__boxes">
-            <div className="ev-conclusion__box">
-              <div className="ev-conclusion__box-label">决定上限</div>
-              <div className="ev-conclusion__box-title">模型</div>
-            </div>
-            <div className="ev-conclusion__vs">VS</div>
-            <div className="ev-conclusion__box ev-conclusion__box--highlight">
-              <div className="ev-conclusion__box-label">决定落地</div>
-              <div className="ev-conclusion__box-title">Harness</div>
-            </div>
-          </div>
-          <div className="ev-conclusion__thanks">谢谢大家</div>
-        </div>
-      )}
     </div>
   );
 };
