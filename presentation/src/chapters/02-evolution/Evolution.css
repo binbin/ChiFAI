@@ -16,13 +16,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 36px;
+  gap: 54px;
   animation: ev-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .ev-intro__label {
   font-family: var(--font-display-en);
-  font-size: 21px;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: 0.4em;
   color: var(--text-mute);
@@ -31,14 +31,14 @@
 
 .ev-intro__text {
   font-family: var(--font-display-cn);
-  font-size: 72px;
+  font-size: 108px;
   font-weight: 500;
   color: var(--text);
 }
 
 .ev-intro__sub {
   font-family: var(--font-body);
-  font-size: 42px;
+  font-size: 63px;
   font-weight: 500;
   color: var(--text-2);
 }
@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   animation: ev-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
   max-width: 1400px;
   padding: 0 40px;
@@ -63,14 +63,14 @@
 .ev-generation--split {
   flex-direction: row;
   justify-content: center;
-  gap: 60px;
+  gap: 50px;
 }
 
 .ev-generation__left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 18px;
   flex: 1;
   max-width: 500px;
 }
@@ -92,7 +92,7 @@
 
 .ev-generation__num {
   font-family: var(--font-display-cn);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.2em;
@@ -100,7 +100,7 @@
 
 .ev-generation__time {
   font-family: var(--font-display-en);
-  font-size: 21px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--text-mute);
   letter-spacing: 0.1em;
@@ -108,7 +108,7 @@
 
 .ev-generation__title {
   font-family: var(--font-display-en);
-  font-size: 54px;
+  font-size: 81px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: 0.05em;
@@ -116,34 +116,34 @@
 
 .ev-generation__subtitle {
   font-family: var(--font-display-cn);
-  font-size: 30px;
+  font-size: 45px;
   font-weight: 600;
   color: var(--text-2);
 }
 
 .ev-generation__focus {
   font-family: var(--font-body);
-  font-size: 27px;
+  font-size: 40px;
   font-weight: 600;
   color: var(--accent);
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .ev-generation__items {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
   max-width: 1000px;
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 .ev-generation__item {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--text);
-  padding: 12px 24px;
+  padding: 18px 36px;
   border: 2px solid var(--rule);
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -152,34 +152,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin-top: 12px;
 }
 
 .ev-generation__arrow {
   font-family: var(--font-display-en);
-  font-size: 24px;
+  font-size: 28px;
   color: var(--accent);
 }
 
 .ev-generation__loop-item {
   font-family: var(--font-display-en);
-  font-size: 27px;
+  font-size: 34px;
   font-weight: 700;
   color: var(--text);
-  padding: 8px 24px;
+  padding: 8px 28px;
   border: 2px solid var(--rule);
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  min-width: 200px;
+  min-width: 260px;
   text-align: center;
 }
 
 .ev-generation__essence {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 500;
   color: var(--text-2);
-  margin-top: 12px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -189,17 +189,17 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 12px;
   padding: 24px 36px;
   border: 2px solid var(--accent);
-  border-radius: 8px;
+  border-radius: 12px;
   background: var(--accent-soft);
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .ev-generation__practice-label {
   font-family: var(--font-display-cn);
-  font-size: 21px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.2em;
@@ -207,7 +207,7 @@
 
 .ev-generation__practice-content {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -217,23 +217,23 @@
 .ev-generation__practice-flow {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 12px;
+  gap: 24px;
+  margin-top: 18px;
 }
 
 .ev-generation__flow-item {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--text);
-  padding: 12px 24px;
+  padding: 18px 36px;
   border: 2px solid var(--rule);
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .ev-generation__flow-plus {
   font-family: var(--font-display-en);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--accent);
 }
@@ -241,16 +241,16 @@
 .ev-generation__practice-items {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 12px;
+  gap: 18px;
+  margin-top: 18px;
 }
 
 .ev-generation__practice-item {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--text);
-  padding: 8px 16px;
+  padding: 12px 24px;
   border-left: 3px solid var(--accent);
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -260,8 +260,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
-  margin-top: 24px;
+  gap: 27px;
+  margin-top: 36px;
   width: 100%;
   max-width: 1200px;
 }
@@ -270,22 +270,22 @@
   width: 100%;
   max-width: 900px;
   border: 2px solid var(--rule);
-  border-radius: 12px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3);
 }
 
 .ev-generation__img {
   width: 100%;
   max-width: 600px;
   border: 2px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .ev-generation__screenshots {
   display: flex;
-  gap: 24px;
+  gap: 36px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -294,7 +294,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -302,13 +302,13 @@
   width: 100%;
   max-width: 350px;
   border: 2px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .ev-generation__screenshot-label {
   font-family: var(--font-body);
-  font-size: 21px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--text-2);
   text-align: center;
@@ -316,7 +316,7 @@
 
 .ev-generation__demo-label {
   font-family: var(--font-body);
-  font-size: 21px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--text-2);
   text-align: center;
@@ -341,26 +341,26 @@
 
 .ev-generation__feature-num {
   font-family: var(--font-mono);
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 700;
   color: var(--accent);
 }
 
 .ev-generation__feature-desc {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--text);
 }
 
 .ev-generation__url {
   font-family: var(--font-mono);
-  font-size: 36px;
+  font-size: 54px;
   font-weight: 700;
   color: var(--accent);
-  padding: 18px 36px;
+  padding: 27px 54px;
   border: 2px solid var(--accent);
-  border-radius: 8px;
+  border-radius: 12px;
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -368,17 +368,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-top: 24px;
-  padding: 24px 36px;
+  gap: 18px;
+  margin-top: 36px;
+  padding: 36px 54px;
   border: 2px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 12px;
   animation: ev-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .ev-generation__vision-label {
   font-family: var(--font-display-cn);
-  font-size: 21px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--text-mute);
   letter-spacing: 0.2em;
@@ -386,7 +386,7 @@
 
 .ev-generation__vision-content {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--text);
   text-align: center;

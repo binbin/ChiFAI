@@ -84,20 +84,18 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
             <div className="ev-generation__time">2023</div>
           </div>
           <div className="ev-generation__title">
-            Prompt Engineering 实际应用示例
+            Prompt Engineering 应用示例
           </div>
           <div className="ev-generation__demo">
             <video
               src="/prompt示例.mp4"
               controls
-              autoPlay
+              autoPlay={false}
               muted
-              loop
+              loop={false}
               className="ev-generation__video"
             />
-            <div className="ev-generation__demo-label">
-              视频内容源引抖音号 @AI帮我干活
-            </div>
+            <div className="ev-generation__demo-label">视频内容源于网络</div>
           </div>
         </div>
       )}

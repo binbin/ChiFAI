@@ -294,20 +294,21 @@
 .intro-shift__equation {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 40px;
 }
 
 .intro-shift__from,
+.intro-shift__mid,
 .intro-shift__to {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .intro-shift__text {
   font-family: var(--font-display-cn);
-  font-size: 108px;
+  font-size: 72px;
   font-weight: 500;
   color: var(--text);
   line-height: 1.2;
@@ -340,7 +341,7 @@
 
 .intro-shift__desc {
   font-family: var(--font-display-en);
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--text-2);
   letter-spacing: 0.15em;
@@ -377,6 +378,13 @@
   background: var(--accent);
   border-color: var(--accent);
   animation: intro-dot-pulse 1.5s ease-in-out infinite;
+}
+
+.intro-shift__timeline-dot--future {
+  background: transparent;
+  border-color: var(--accent);
+  border-style: dashed;
+  opacity: 0.6;
 }
 
 .intro-shift__timeline-line {

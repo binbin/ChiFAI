@@ -74,9 +74,27 @@ const Intro: React.FC<IntroProps> = ({ step }) => {
               <span className="intro-shift__desc">Model Works</span>
             </div>
             <div className="intro-shift__arrow">
-              <svg width="120" height="36" viewBox="0 0 120 36">
+              <svg width="80" height="36" viewBox="0 0 80 36">
                 <path
-                  d="M0 18 L100 18 M88 6 L108 18 L88 30"
+                  d="M0 18 L68 18 M56 6 L76 18 L56 30"
+                  fill="none"
+                  stroke="var(--accent)"
+                  strokeWidth="3"
+                />
+              </svg>
+            </div>
+            <div className="intro-shift__mid">
+              <span className="intro-shift__text intro-shift__text--highlight">
+                模型<span className="intro-shift__emphasis">能干活</span>
+              </span>
+              <span className="intro-shift__desc">
+                Model Works <em>for You</em>
+              </span>
+            </div>
+            <div className="intro-shift__arrow">
+              <svg width="80" height="36" viewBox="0 0 80 36">
+                <path
+                  d="M0 18 L68 18 M56 6 L76 18 L56 30"
                   fill="none"
                   stroke="var(--accent)"
                   strokeWidth="3"
@@ -85,10 +103,10 @@ const Intro: React.FC<IntroProps> = ({ step }) => {
             </div>
             <div className="intro-shift__to">
               <span className="intro-shift__text intro-shift__text--highlight">
-                模型<span className="intro-shift__emphasis">能干活</span>
+                模型<span className="intro-shift__emphasis">自进化</span>
               </span>
               <span className="intro-shift__desc">
-                Model Works <em>for You</em>
+                Model <em>Evolves</em>
               </span>
             </div>
           </div>
@@ -96,6 +114,8 @@ const Intro: React.FC<IntroProps> = ({ step }) => {
             <div className="intro-shift__timeline-dot intro-shift__timeline-dot--past" />
             <div className="intro-shift__timeline-line" />
             <div className="intro-shift__timeline-dot intro-shift__timeline-dot--now" />
+            <div className="intro-shift__timeline-line" />
+            <div className="intro-shift__timeline-dot intro-shift__timeline-dot--future" />
           </div>
         </div>
       )}
