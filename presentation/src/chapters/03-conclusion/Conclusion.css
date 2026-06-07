@@ -64,3 +64,59 @@
     transform: translateY(0);
   }
 }
+
+/* ===== FontAwesome 图标样式 ===== */
+.conclusion__label-icon {
+  margin-right: 12px;
+  color: var(--accent);
+  animation: conclusion-icon-heart 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(74, 158, 255, 0.4));
+}
+
+.conclusion__thanks-icon {
+  margin-right: 16px;
+  color: var(--accent);
+  font-size: 0.8em;
+  animation: conclusion-icon-bounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(74, 158, 255, 0.4));
+}
+
+.conclusion__ai-icon {
+  margin-right: 12px;
+  color: var(--accent);
+  animation: conclusion-icon-rotate 3s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(74, 158, 255, 0.4));
+}
+
+.conclusion__details-icon {
+  margin-right: 10px;
+  color: var(--text-2);
+  filter: drop-shadow(0 0 4px rgba(74, 158, 255, 0.3));
+}
+
+@keyframes conclusion-icon-heart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes conclusion-icon-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes conclusion-icon-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

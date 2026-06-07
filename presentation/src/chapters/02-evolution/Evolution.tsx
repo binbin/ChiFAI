@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Evolution.css";
 
 interface EvolutionProps {
@@ -49,12 +50,21 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
       {step === 1 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
-            <div className="ev-generation__num">第一代</div>
+            <div className="ev-generation__num">
+              <FontAwesomeIcon icon="comments" className="ev-generation__num-icon" />
+              第一代
+            </div>
             <div className="ev-generation__time">2023</div>
           </div>
-          <div className="ev-generation__title">Prompt Engineering</div>
+          <div className="ev-generation__title">
+            <FontAwesomeIcon icon="comments" className="ev-generation__title-icon" />
+            Prompt Engineering
+          </div>
           <div className="ev-generation__subtitle">提示词工程</div>
-          <div className="ev-generation__focus">核心：如何把话说对</div>
+          <div className="ev-generation__focus">
+            <FontAwesomeIcon icon="bullseye" className="ev-generation__focus-icon" />
+            核心：如何把话说对
+          </div>
           <div className="ev-generation__items">
             {[
               "你是一位资深律师...",
@@ -104,12 +114,21 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
       {step === 3 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
-            <div className="ev-generation__num">第二代</div>
+            <div className="ev-generation__num">
+              <FontAwesomeIcon icon="database" className="ev-generation__num-icon" />
+              第二代
+            </div>
             <div className="ev-generation__time">2024</div>
           </div>
-          <div className="ev-generation__title">RAG Engineering</div>
+          <div className="ev-generation__title">
+            <FontAwesomeIcon icon="database" className="ev-generation__title-icon" />
+            RAG Engineering
+          </div>
           <div className="ev-generation__subtitle">检索增强工程</div>
-          <div className="ev-generation__focus">核心：如何给模型更多知识</div>
+          <div className="ev-generation__focus">
+            <FontAwesomeIcon icon="bullseye" className="ev-generation__focus-icon" />
+            核心：如何给模型更多知识
+          </div>
           <div className="ev-generation__items">
             {["向量数据库", "知识库", "RAG"].map((item, i) => (
               <div
@@ -167,12 +186,19 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
       {step === 5 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
-            <div className="ev-generation__num">第三代</div>
+            <div className="ev-generation__num">
+              <FontAwesomeIcon icon="network-wired" className="ev-generation__num-icon" />
+              第三代
+            </div>
             <div className="ev-generation__time">2025</div>
           </div>
-          <div className="ev-generation__title">Context Engineering</div>
+          <div className="ev-generation__title">
+            <FontAwesomeIcon icon="network-wired" className="ev-generation__title-icon" />
+            Context Engineering
+          </div>
           <div className="ev-generation__subtitle">上下文工程</div>
           <div className="ev-generation__focus">
+            <FontAwesomeIcon icon="bullseye" className="ev-generation__focus-icon" />
             核心：如何管理模型的全部上下文
           </div>
           <div className="ev-generation__items">
@@ -296,12 +322,21 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
       {step === 9 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
-            <div className="ev-generation__num">第四代</div>
+            <div className="ev-generation__num">
+              <FontAwesomeIcon icon="robot" className="ev-generation__num-icon" />
+              第四代
+            </div>
             <div className="ev-generation__time">2025-2026</div>
           </div>
-          <div className="ev-generation__title">Agent Engineering</div>
+          <div className="ev-generation__title">
+            <FontAwesomeIcon icon="robot" className="ev-generation__title-icon" />
+            Agent Engineering
+          </div>
           <div className="ev-generation__subtitle">智能体工程</div>
-          <div className="ev-generation__focus">核心：如何让模型完成任务</div>
+          <div className="ev-generation__focus">
+            <FontAwesomeIcon icon="bullseye" className="ev-generation__focus-icon" />
+            核心：如何让模型完成任务
+          </div>
           <div className="ev-generation__loop">
             {["Goal", "Plan", "Tool Use", "Observe", "Reflect", "Continue"].map(
               (item, i) => (
@@ -382,12 +417,21 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
       {step === 11 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
-            <div className="ev-generation__num">第五代</div>
+            <div className="ev-generation__num">
+              <FontAwesomeIcon icon="project-diagram" className="ev-generation__num-icon" />
+              第五代
+            </div>
             <div className="ev-generation__time">2026</div>
           </div>
-          <div className="ev-generation__title">Agentic Systems</div>
+          <div className="ev-generation__title">
+            <FontAwesomeIcon icon="project-diagram" className="ev-generation__title-icon" />
+            Agentic Systems
+          </div>
           <div className="ev-generation__subtitle">智能体系统工程</div>
-          <div className="ev-generation__focus">核心：如何管理大量智能体</div>
+          <div className="ev-generation__focus">
+            <FontAwesomeIcon icon="bullseye" className="ev-generation__focus-icon" />
+            核心：如何管理大量智能体
+          </div>
           <div className="ev-generation__items">
             {[
               "Gateway",
@@ -538,12 +582,19 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
       {step === 16 && (
         <div className="ev-generation">
           <div className="ev-generation__header">
-            <div className="ev-generation__num">第六代</div>
+            <div className="ev-generation__num">
+              <FontAwesomeIcon icon="brain" className="ev-generation__num-icon" />
+              第六代
+            </div>
             <div className="ev-generation__time">2026+</div>
           </div>
-          <div className="ev-generation__title">Harness Engineering</div>
+          <div className="ev-generation__title">
+            <FontAwesomeIcon icon="brain" className="ev-generation__title-icon" />
+            Harness Engineering
+          </div>
           <div className="ev-generation__subtitle">驾驭工程 + 自进化智能体</div>
           <div className="ev-generation__focus">
+            <FontAwesomeIcon icon="bullseye" className="ev-generation__focus-icon" />
             核心：如何给Agent搭建可靠的运行环境
           </div>
           <div className="ev-generation__items">

@@ -1,75 +1,73 @@
 /* ─────────────────────────────────────────────────────────────────────
- * Theme · neon-cyber
- *   Cyberpunk future-tech. Deep navy canvas, electric cyan as primary
- *   accent, magenta as the secondary glow tint (used only via *-glow
- *   alpha). Clash Display for display, Satoshi for body, JetBrains Mono
- *   for terminal-y bits. Signature: faint cyan grid + neon text-shadow
- *   on hero text.
+ * Theme · blueprint
+ *   Engineering blueprint aesthetic. Deep navy-blue canvas with
+ *   white/light-blue technical lines. Clean, professional, and
+ *   systematic feel. Perfect for technical presentations.
  *
  *   character knobs:
- *     • hero numbers   — Clash Display, weight 700, tabular figures
- *     • rule           — 1px solid cyan (low alpha)
- *     • card           — slight radius (8-12px) with cyan inset glow
- *     • surface        — fine cyan grid (40px) + soft scan vignette
- *     • motion         — snappy + futuristic (faster than midnight)
+ *     • hero numbers   — Technical mono font, weight 600
+ *     • rule           — 1px solid white-blue (low alpha)
+ *     • card           — Sharp corners (0px) with blueprint border
+ *     • surface        — Blueprint grid pattern (50px)
+ *     • motion         — Smooth, systematic transitions
  * ───────────────────────────────────────────────────────────────────── */
 :root {
-  /* ─── palette ─── */
-  --shell:        #04060f;
-  --surface:      #0a0f1c;
-  --surface-2:    #111828;
-  --surface-3:    #1a2238;
-  --text:         #e8f4ff;
-  --text-2:       #b8c8e0;
-  --text-mute:    #6a7a98;
-  --text-faint:   #3a4660;
-  --rule:         rgba(0, 255, 204, 0.22);
-  --accent:       #00ffcc;             /* electric cyan */
-  --accent-soft:  rgba(0, 255, 204, 0.10);
-  --accent-glow:  rgba(255, 0, 170, 0.55);   /* SIGNATURE — magenta glow */
+  /* ─── palette: blueprint ─── */
+  --shell:        #0a1628;
+  --surface:      #0d1b2a;
+  --surface-2:    #1b2838;
+  --surface-3:    #233548;
+  --text:         #e0eaff;
+  --text-2:       #a8c4e0;
+  --text-mute:    #5a7a9a;
+  --text-faint:   #3a5068;
+  --rule:         rgba(74, 158, 255, 0.25);
+  --accent:       #4a9eff;             /* blueprint blue */
+  --accent-soft:  rgba(74, 158, 255, 0.08);
+  --accent-glow:  rgba(100, 180, 255, 0.40);   /* soft blue glow */
 
   /* ─── fonts ─── */
   --font-display-cn: "Noto Sans SC", "Source Han Sans SC", -apple-system, sans-serif;
-  --font-display-en: "Clash Display", "Space Grotesk", "Manrope", "Inter", sans-serif;
-  --font-body:       "Satoshi", "Inter", "Noto Sans SC", -apple-system, sans-serif;
-  --font-mono:       "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  --font-display-en: "Space Grotesk", "Manrope", "Inter", "SF Pro Display", sans-serif;
+  --font-body:       "Inter", "Noto Sans SC", -apple-system, sans-serif;
+  --font-mono:       "JetBrains Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
   --font-features:   "tnum", "ss01", "ss02", "zero";
 
-  /* ─── motion: snappy future ─── */
-  --dur-quick:     160ms;
-  --dur-base:      380ms;
-  --dur-slow:      650ms;
-  --dur-cinematic: 1050ms;
+  /* ─── motion: smooth systematic ─── */
+  --dur-quick:     200ms;
+  --dur-base:      400ms;
+  --dur-slow:      700ms;
+  --dur-cinematic: 1100ms;
 
-  /* ─── design identity: cyber edge ─── */
-  --r-card:        var(--r-sm);
+  /* ─── design identity: blueprint ─── */
+  --r-card:        0;
   --r-stage:       0;
   --rule-w:        1px;
   --rule-style:    solid;
-  --hero-num-font:    var(--font-display-en);
+  --hero-num-font:    var(--font-mono);
   --hero-num-style:   normal;
-  --hero-num-weight:  700;
-  --hero-num-track:   -0.02em;
+  --hero-num-weight:  600;
+  --hero-num-track:   0.02em;
   --stage-pad-x:   100px;
   --stage-pad-y:   80px;
   --text-shadow:
-    0 0 12px rgba(0, 255, 204, 0.35),
-    0 0 24px rgba(255, 0, 170, 0.12);    /* SIGNATURE — cyan + magenta tail */
+    0 0 10px rgba(74, 158, 255, 0.30),
+    0 0 20px rgba(74, 158, 255, 0.10);    /* blueprint blue glow */
   --card-shadow:
     inset 0 0 0 1px var(--rule),
-    0 0 40px rgba(0, 255, 204, 0.06);
+    0 0 30px rgba(74, 158, 255, 0.05);
   --shadow-stage:
-    0 60px 160px rgba(0, 30, 50, 0.65),
-    0 0 0 1px rgba(0, 255, 204, 0.18),
-    0 0 80px rgba(0, 255, 204, 0.08);
+    0 60px 160px rgba(0, 10, 30, 0.70),
+    0 0 0 1px rgba(74, 158, 255, 0.20),
+    0 0 60px rgba(74, 158, 255, 0.06);
 
-  /* ─── decoration: cyan grid + soft scan vignette ─── */
+  /* ─── decoration: blueprint grid ─── */
   --surface-pattern:
-    linear-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 204, 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(0, 255, 204, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 204, 0.025) 1px, transparent 1px);
-  --surface-pattern-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+    linear-gradient(rgba(74, 158, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 158, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(74, 158, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 158, 255, 0.04) 1px, transparent 1px);
+  --surface-pattern-size: 200px 200px, 200px 200px, 50px 50px, 50px 50px;
   --surface-vignette:
-    radial-gradient(ellipse at center, transparent 35%, rgba(0, 10, 25, 0.6) 100%);
+    radial-gradient(ellipse at center, transparent 40%, rgba(5, 15, 30, 0.65) 100%);
 }

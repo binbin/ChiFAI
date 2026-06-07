@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import "./Intro.css";
 
 interface IntroProps {
@@ -20,9 +22,13 @@ const Intro: React.FC<IntroProps> = ({ step }) => {
       {/* Step 0: 开场致辞 */}
       {step === 0 && (
         <div className="intro-greeting">
-          <div className="intro-greeting__org">赤峰市人力资源和社会保障局</div>
+          <div className="intro-greeting__org">
+            <FontAwesomeIcon icon="building" className="intro-greeting__icon" />
+            赤峰市人力资源和社会保障局
+          </div>
           <div className="intro-greeting__line" />
           <h1 className="intro-greeting__title">
+            <FontAwesomeIcon icon="robot" className="intro-greeting__title-icon" />
             <span className="intro-greeting__title-main">AI 应用实践</span>
             <span className="intro-greeting__title-sub"></span>
           </h1>
@@ -126,26 +132,29 @@ const Intro: React.FC<IntroProps> = ({ step }) => {
           <div className="intro-structure__title">AI工程六代演进</div>
           <div className="intro-structure__stages">
             {[
-              { num: "01", label: "Prompt", zh: "提示词工程", time: "2023" },
-              { num: "02", label: "RAG", zh: "检索增强工程", time: "2024" },
-              { num: "03", label: "Context", zh: "上下文工程", time: "2025" },
+              { num: "01", label: "Prompt", zh: "提示词工程", time: "2023", icon: "comments" },
+              { num: "02", label: "RAG", zh: "检索增强工程", time: "2024", icon: "database" },
+              { num: "03", label: "Context", zh: "上下文工程", time: "2025", icon: "network-wired" },
               {
                 num: "04",
                 label: "Agent",
                 zh: "智能体工程",
                 time: "2025-2026",
+                icon: "robot",
               },
               {
                 num: "05",
                 label: "Agentic Systems",
                 zh: "智能体系统工程",
                 time: "2026",
+                icon: "project-diagram",
               },
               {
                 num: "06",
                 label: "Self-Improving",
                 zh: "自进化智能体",
                 time: "2026+",
+                icon: "brain",
               },
             ].map((stage, i) => (
               <React.Fragment key={stage.num}>
@@ -165,6 +174,9 @@ const Intro: React.FC<IntroProps> = ({ step }) => {
                   className="intro-structure__stage"
                   style={{ animationDelay: `${i * 120}ms` }}
                 >
+                  <div className="intro-structure__stage-icon">
+                    <FontAwesomeIcon icon={stage.icon as IconProp} />
+                  </div>
                   <div className="intro-structure__stage-num hero-num">
                     {stage.num}
                   </div>
