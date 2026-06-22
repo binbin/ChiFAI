@@ -1,0 +1,140 @@
+[
+  {
+    "chapter": "intro",
+    "step": 1,
+    "text": "大家好，我是宁彬彬，今天向大家介绍赤峰人社在AI应用工程方面的一些探索和实践。",
+    "audio": "intro/1.mp3"
+  },
+  {
+    "chapter": "intro",
+    "step": 2,
+    "text": "过去两年，AI 工程领域发生了深刻变化。",
+    "audio": "intro/2.mp3"
+  },
+  {
+    "chapter": "intro",
+    "step": 3,
+    "text": "核心变化是什么？就是从\"模型能回答\"，走向了\"模型能干活\"，再走向\"模型能自己变强\"。",
+    "audio": "intro/3.mp3"
+  },
+  {
+    "chapter": "intro",
+    "step": 4,
+    "text": "如果从AI应用工程的发展脉络来看，大致可以分为六个阶段。从2023年的提示词工程，到2024年的检索增强工程，到2025年的上下文工程，再到2025-2026年的智能体工程，然后到2026年的智能体系统工程，最后到2026年以后的自进化智能体。每个阶段都在前一个基础上，扩展了AI的能力边界。",
+    "audio": "intro/4.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 1,
+    "text": "我们用一个时间轴，来看清整个AI工程的发展脉络，以及赤峰人社在每个阶段的实践。",
+    "audio": "evolution/1.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 2,
+    "text": "2023年，提示词工程。大家都在研究怎么把话说对，让模型更好地回答问题。本质是调教模型，当时AI更像搜索引擎升级版。",
+    "audio": "evolution/2.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 3,
+    "text": "这是提示词工程的实际应用示例。",
+    "audio": "evolution/3.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 4,
+    "text": "2024年，检索增强工程。大家发现提示词再厉害，也不知道单位内部文档。于是出现向量数据库、知识库，思路变成不训练模型，而是给模型查资料。",
+    "audio": "evolution/4.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 5,
+    "text": "赤峰人社在这个阶段开始构建人社领域的知识库，整理政策文件和业务规则。开发了赤爱人社智能体，基于检索增强的知识库问答，包含1000多条人社领域常见问答。",
+    "audio": "evolution/5.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 6,
+    "text": "2025年，上下文工程。Anthropic把这个概念带火，大家发现提示词只是上下文的一部分。上下文包括系统提示词、用户历史、记忆、MCP工具、检索增强知识、工作状态、文件、网页、数据库等。",
+    "audio": "evolution/6.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 7,
+    "text": "赤峰人社在这个阶段通过MCP接入了岗位推荐和培训信息推荐。这是MCP工具调用的实际界面。",
+    "audio": "evolution/7.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 8,
+    "text": "我们还开发了工伤鉴定AI辅助系统，通过文字识别和大语言模型分析，辅助工伤鉴定工作。这是AI模型配置界面。",
+    "audio": "evolution/8.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 9,
+    "text": "另一个案例是就业岗位数字人讲解，结合数字人、语音合成和口型同步技术，实现就业岗位的智能介绍。",
+    "audio": "evolution/9.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 10,
+    "text": "2025-2026年，智能体工程。Claude Code、Codex、Cursor等工具出现后，重点从怎么回答变成怎么完成任务。智能体开始拥有工具调用、浏览器、文件系统、终端、记忆、工作流，形成智能体循环。",
+    "audio": "evolution/10.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 11,
+    "text": "赤峰人社在这个阶段开发了AI预审系统，通过业务抓取、业务规则、AI分析，实现了一键批量预审。这是预审系统的完整流程。",
+    "audio": "evolution/11.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 12,
+    "text": "2026年，智能体系统工程。OpenClaw、Hermes等项目出现后，智能体不再是一个程序，而是一个数字员工。这些项目已经不只是智能体，而是智能体操作系统。",
+    "audio": "evolution/12.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 13,
+    "text": "我在这个阶段正在探索GovClaw自主智能体，它能记住用户偏好，自主完成多步骤任务。",
+    "audio": "evolution/13.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 14,
+    "text": "让我们来看一个实际例子。用户说想开一家包子铺，需要生成创业登记表。AI会理解用户意图，主动引导后续流程。",
+    "audio": "evolution/14.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 15,
+    "text": "AI会主动询问必要信息，比如名称，确保生成的文档完整准确。这就是自主决策的能力。",
+    "audio": "evolution/15.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 16,
+    "text": "信息收集完成后，AI自动生成《创业登记申请表》，用户可以直接下载使用。这已经不是AI回答问题，而是AI替你干活。",
+    "audio": "evolution/16.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 17,
+    "text": "2026年以后，驾驭工程和自进化智能体。未来竞争的是权限系统、安全系统、多智能体编排、记忆系统、审计系统、沙箱系统、工作流系统。如何给智能体搭建一整套可靠的运行环境，如何让智能体自己变强，这是新的方向。",
+    "audio": "evolution/17.mp3"
+  },
+  {
+    "chapter": "evolution",
+    "step": 18,
+    "text": "我们正在向这个方向探索，目标是构建更稳定、更可靠的AI系统。真正决定上限的可能是模型，但真正决定能不能落地、能不能稳定交付的，就是驾驭工程。",
+    "audio": "evolution/18.mp3"
+  },
+  {
+    "chapter": "conclusion",
+    "step": 1,
+    "text": "以上就是赤峰人社在AI应用方面的探索和实践。本视频由AI生成。感谢大家的观看。",
+    "audio": "conclusion/1.mp3"
+  }
+]
