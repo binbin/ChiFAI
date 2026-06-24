@@ -98,7 +98,7 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           </div>
           <div className="ev-generation__demo">
             <video
-              src="/prompt示例.mp4"
+              src={`${import.meta.env.BASE_URL}prompt示例.mp4`}
               controls
               autoPlay={false}
               muted
@@ -173,7 +173,7 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           </div>
           <div className="ev-generation__right">
             <img
-              src="/rag示例.jpg"
+              src={`${import.meta.env.BASE_URL}rag示例.jpg`}
               alt="RAG示例"
               className="ev-generation__img"
             />
@@ -249,7 +249,7 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           </div>
           <div className="ev-generation__right">
             <img
-              src="/mcp示例.jpg"
+              src={`${import.meta.env.BASE_URL}mcp示例.jpg`}
               alt="MCP示例"
               className="ev-generation__img"
             />
@@ -279,7 +279,7 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           </div>
           <div className="ev-generation__right">
             <img
-              src="/gs.png"
+              src={`${import.meta.env.BASE_URL}gs.png`}
               alt="工伤鉴定AI辅助系统"
               className="ev-generation__img"
             />
@@ -309,7 +309,7 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           </div>
           <div className="ev-generation__right">
             <img
-              src="/jy.png"
+              src={`${import.meta.env.BASE_URL}jy.png`}
               alt="就业岗位数字人讲解"
               className="ev-generation__img"
             />
@@ -397,15 +397,15 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           <div className="ev-generation__demo">
             <div className="ev-generation__screenshots">
               <div className="ev-generation__screenshot">
-                <img src="/业务预审示例图1（扫码登录）.jpg" alt="扫码登录" />
+                <img src={`${import.meta.env.BASE_URL}业务预审示例图1（扫码登录）.jpg`} alt="扫码登录" />
                 <div className="ev-generation__screenshot-label">扫码登录</div>
               </div>
               <div className="ev-generation__screenshot">
-                <img src="/业务预审图2（设置规则）.jpg" alt="设置规则" />
+                <img src={`${import.meta.env.BASE_URL}业务预审图2（设置规则）.jpg`} alt="设置规则" />
                 <div className="ev-generation__screenshot-label">设置规则</div>
               </div>
               <div className="ev-generation__screenshot">
-                <img src="/业务预审图3（自动预审）.jpg" alt="自动预审" />
+                <img src={`${import.meta.env.BASE_URL}业务预审图3（自动预审）.jpg`} alt="自动预审" />
                 <div className="ev-generation__screenshot-label">自动预审</div>
               </div>
             </div>
@@ -497,7 +497,7 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           </div>
           <div className="ev-generation__right">
             <img
-              src="/govclaw1.png"
+              src={`${import.meta.env.BASE_URL}govclaw1.png`}
               alt="GovClaw对话界面"
               className="ev-generation__img"
             />
@@ -527,7 +527,7 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           </div>
           <div className="ev-generation__right">
             <img
-              src="/govclaw2.png"
+              src={`${import.meta.env.BASE_URL}govclaw2.png`}
               alt="GovClaw信息收集"
               className="ev-generation__img"
             />
@@ -564,13 +564,13 @@ const Evolution: React.FC<EvolutionProps> = ({ step }) => {
           <div className="ev-generation__right">
             <div className="ev-generation__screenshots">
               <div className="ev-generation__screenshot">
-                <img src="/govclaw3.png" alt="GovClaw文档生成" />
+                <img src={`${import.meta.env.BASE_URL}govclaw3.png`} alt="GovClaw文档生成" />
                 <div className="ev-generation__screenshot-label">
                   自动生成文档
                 </div>
               </div>
               <div className="ev-generation__screenshot">
-                <img src="/govclaw4.png" alt="GovClaw成果交付" />
+                <img src={`${import.meta.env.BASE_URL}govclaw4.png`} alt="GovClaw成果交付" />
                 <div className="ev-generation__screenshot-label">下载使用</div>
               </div>
             </div>
