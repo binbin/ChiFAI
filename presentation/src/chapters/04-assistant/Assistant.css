@@ -1,0 +1,1093 @@
+/* ===== Chapter 04 — 人社业务经办助手 ===== */
+
+.assistant-chapter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== 总览 ===== */
+.assistant-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-overview__label {
+  font-family: var(--font-display-en);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.assistant-overview__title {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.assistant-overview__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.assistant-overview__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 16px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-overview__num {
+  font-family: var(--font-display-en);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-overview__icon {
+  font-size: 44px;
+  color: var(--accent);
+}
+
+.assistant-overview__item-label {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-overview__item-en {
+  font-family: var(--font-display-en);
+  font-size: 16px;
+  color: var(--text-mute);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* ===== 章节标题页 ===== */
+.assistant-section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-section-title__num {
+  font-family: var(--font-display-en);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-section-title__icon {
+  font-size: 64px;
+  color: var(--accent);
+}
+
+.assistant-section-title__text {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.assistant-section-title__en {
+  font-family: var(--font-display-en);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-mute);
+  letter-spacing: 0.2em;
+}
+
+/* ===== 业务AI预审 - 传统痛点 ===== */
+.assistant-preaudit-pain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-preaudit-pain__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-preaudit-pain__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-preaudit-pain__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+}
+
+.assistant-preaudit-pain__en {
+  font-family: var(--font-display-en);
+  font-size: 22px;
+  color: var(--text-mute);
+  letter-spacing: 0.1em;
+}
+
+.assistant-preaudit-pain__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.assistant-preaudit-pain__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-preaudit-pain__num {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-preaudit-pain__icon {
+  font-size: 40px;
+  color: var(--warning);
+}
+
+.assistant-preaudit-pain__title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-preaudit-pain__desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== 业务AI预审 - AI预审流程 ===== */
+.assistant-preaudit-ai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-preaudit-ai__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-preaudit-ai__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-preaudit-ai__subtitle {
+  font-family: var(--font-body);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.assistant-preaudit-ai__desc {
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-2);
+  text-align: center;
+  max-width: 800px;
+}
+
+.assistant-preaudit-ai__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.assistant-preaudit-ai__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--surface-1);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-preaudit-ai__step-num {
+  font-family: var(--font-display-en);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-preaudit-ai__icon {
+  font-size: 44px;
+  color: var(--accent);
+}
+
+.assistant-preaudit-ai__title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-preaudit-ai__desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== 业务AI预审 - 对比与价值 ===== */
+.assistant-preaudit-compare {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-preaudit-compare__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-preaudit-compare__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-preaudit-compare__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+}
+
+.assistant-preaudit-compare__table {
+  width: 100%;
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.assistant-preaudit-compare__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-preaudit-compare__row--header {
+  background: var(--surface-1);
+}
+
+.assistant-preaudit-compare__row--header .assistant-preaudit-compare__cell {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-preaudit-compare__cell {
+  padding: 16px 20px;
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--rule);
+}
+
+.assistant-preaudit-compare__cell--item {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.assistant-preaudit-compare__cell--old {
+  color: var(--error);
+}
+
+.assistant-preaudit-compare__cell--new {
+  color: var(--accent);
+}
+
+.assistant-preaudit-compare__value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 32px;
+  background: var(--surface-1);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+}
+
+.assistant-preaudit-compare__value-title {
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-preaudit-compare__value-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.assistant-preaudit-compare__value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.assistant-preaudit-compare__value-item svg {
+  font-size: 28px;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.assistant-preaudit-compare__value-item-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.assistant-preaudit-compare__value-item-desc {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+/* ===== 养老金调整明白单 - 痛点 ===== */
+.assistant-pension-pain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-pension-pain__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-pension-pain__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-pension-pain__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+}
+
+.assistant-pension-pain__desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.assistant-pension-pain__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.assistant-pension-pain__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-pension-pain__num {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-pension-pain__icon {
+  font-size: 40px;
+  color: var(--warning);
+}
+
+.assistant-pension-pain__title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-pension-pain__desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== 养老金调整明白单 - 内容与价值 ===== */
+.assistant-pension-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-pension-content__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-pension-content__label {
+  font-family: var(--font-display-cn);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-pension-content__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.assistant-pension-content__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.assistant-pension-content__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-pension-content__icon {
+  font-size: 40px;
+  color: var(--accent);
+}
+
+.assistant-pension-content__title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-pension-content__desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.assistant-pension-content__value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 32px;
+  background: var(--surface-1);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+}
+
+.assistant-pension-content__value-title {
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-pension-content__value-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.assistant-pension-content__value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.assistant-pension-content__value-item svg {
+  font-size: 28px;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.assistant-pension-content__value-item-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.assistant-pension-content__value-item-desc {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+/* ===== 受理业务规范化交接 - 痛点 ===== */
+.assistant-handover-pain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-handover-pain__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-handover-pain__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-handover-pain__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+}
+
+.assistant-handover-pain__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.assistant-handover-pain__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-handover-pain__num {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-handover-pain__icon {
+  font-size: 40px;
+  color: var(--warning);
+}
+
+.assistant-handover-pain__title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-handover-pain__desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== 受理业务规范化交接 - 流程与成效 ===== */
+.assistant-handover-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-handover-flow__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-handover-flow__label {
+  font-family: var(--font-display-cn);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-handover-flow__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.assistant-handover-flow__desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.assistant-handover-flow__steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.assistant-handover-flow__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-handover-flow__step-num {
+  font-family: var(--font-display-en);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-handover-flow__icon {
+  font-size: 40px;
+  color: var(--accent);
+}
+
+.assistant-handover-flow__title {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-handover-flow__desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.assistant-handover-flow__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  width: 100%;
+  padding: 32px;
+  background: var(--surface-1);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+}
+
+.assistant-handover-flow__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.assistant-handover-flow__stat-value {
+  font-family: var(--font-display-en);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.assistant-handover-flow__stat-label {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-2);
+  text-align: center;
+}
+
+/* ===== 职工退休业务预查询 - 痛点图片 ===== */
+.assistant-retire-pain-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-retire-pain-image__img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* ===== 职工退休业务预查询 - 解决方案 ===== */
+.assistant-retire-solution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-retire-solution__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-retire-solution__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-retire-solution__subtitle {
+  font-family: var(--font-body);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.assistant-retire-solution__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.assistant-retire-solution__desc {
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-2);
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.assistant-retire-solution__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.assistant-retire-solution__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 20px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-retire-solution__icon {
+  font-size: 44px;
+  color: var(--accent);
+}
+
+.assistant-retire-solution__title {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.assistant-retire-solution__desc {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.assistant-retire-solution__slogan {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 48px;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 12px;
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 700;
+  animation: assistant-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== 测算养老金 ===== */
+.assistant-calc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: assistant-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.assistant-calc__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-calc__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assistant-calc__en {
+  font-family: var(--font-display-en);
+  font-size: 22px;
+  color: var(--text-mute);
+  letter-spacing: 0.1em;
+}
+
+.assistant-calc__content {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.assistant-calc__painpoints,
+.assistant-calc__solution {
+  flex: 1;
+  padding: 32px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+}
+
+.assistant-calc__subtitle {
+  font-family: var(--font-display-cn);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.assistant-calc__desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+}
+
+.assistant-calc__pain-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.assistant-calc__pain-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.assistant-calc__pain-item svg {
+  font-size: 24px;
+  color: var(--warning);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.assistant-calc__solution-title {
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.assistant-calc__solution-desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+}
+
+.assistant-calc__features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.assistant-calc__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.assistant-calc__feature svg {
+  font-size: 28px;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.assistant-calc__feature-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.assistant-calc__feature-desc {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+/* ===== Animations ===== */
+@keyframes assistant-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes assistant-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

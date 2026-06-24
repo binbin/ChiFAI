@@ -29,8 +29,8 @@ const Intro: React.FC<IntroProps> = ({ step }) => {
           <div className="intro-greeting__line" />
           <h1 className="intro-greeting__title">
             <FontAwesomeIcon icon="robot" className="intro-greeting__title-icon" />
-            <span className="intro-greeting__title-main">AI 应用实践</span>
-            <span className="intro-greeting__title-sub"></span>
+            <span className="intro-greeting__title-main">大模型落地实战</span>
+            <span className="intro-greeting__title-sub">人社政务服务数字场景AI探索与试点成果线上推广</span>
           </h1>
           <div className="intro-greeting__subtitle">
             <div className="intro-greeting__speaker">主讲人：宁彬彬</div>

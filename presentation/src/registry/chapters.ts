@@ -3,6 +3,10 @@ import Intro from "../chapters/01-intro/Intro";
 import { narrations as introNarrations } from "../chapters/01-intro/narrations";
 import Evolution from "../chapters/02-evolution/Evolution";
 import { narrations as evolutionNarrations } from "../chapters/02-evolution/narrations";
+import Assistant from "../chapters/04-assistant/Assistant";
+import { narrations as assistantNarrations } from "../chapters/04-assistant/narrations";
+import Injury from "../chapters/05-injury/Injury";
+import { narrations as injuryNarrations } from "../chapters/05-injury/narrations";
 import Conclusion from "../chapters/03-conclusion/Conclusion";
 import { narrations as conclusionNarrations } from "../chapters/03-conclusion/narrations";
 
@@ -29,6 +33,18 @@ export const CHAPTERS: ChapterDef[] = [
     title: "AI工程六代演进",
     narrations: evolutionNarrations,
     Component: Evolution,
+  },
+  {
+    id: "assistant",
+    title: "人社业务经办助手",
+    narrations: assistantNarrations,
+    Component: Assistant,
+  },
+  {
+    id: "injury",
+    title: "工伤鉴定AI辅助",
+    narrations: injuryNarrations,
+    Component: Injury,
   },
   {
     id: "conclusion",

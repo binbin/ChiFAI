@@ -23,16 +23,24 @@ const Conclusion: React.FC<ConclusionProps> = ({ step }) => {
             致谢
           </div>
           <div className="conclusion__thanks">
-            <FontAwesomeIcon icon="thumbs-up" className="conclusion__thanks-icon" />
+            <FontAwesomeIcon
+              icon="thumbs-up"
+              className="conclusion__thanks-icon"
+            />
             谢谢大家
           </div>
           <div className="conclusion__ai-note">
             <FontAwesomeIcon icon="robot" className="conclusion__ai-icon" />
-            本视频由AI生成
+            {/* 本视频由AI生成 */}
+            本次讲解内容由AI生成
           </div>
           <div className="conclusion__details">
-            <FontAwesomeIcon icon="building" className="conclusion__details-icon" />
-            赤峰人社 · AI应用实践
+            <FontAwesomeIcon
+              icon="building"
+              className="conclusion__details-icon"
+            />
+            赤峰人社 ·
+            大模型落地实战：人社政务服务数字场景AI探索与试点成果线上推广
           </div>
         </div>
       )}

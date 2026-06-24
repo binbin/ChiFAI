@@ -1,0 +1,360 @@
+/* ===== Chapter 05 — 工伤鉴定AI辅助系统 ===== */
+
+.injury-chapter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== 总览 ===== */
+.injury-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  animation: injury-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-overview__label {
+  font-family: var(--font-display-en);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: var(--text-mute);
+  text-transform: uppercase;
+}
+
+.injury-overview__title {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.injury-overview__roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+}
+
+.injury-overview__role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 36px 24px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: injury-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-overview__icon {
+  font-size: 56px;
+  color: var(--accent);
+}
+
+.injury-overview__title-role {
+  font-family: var(--font-body);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.injury-overview__desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== 管理员功能 ===== */
+.injury-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: injury-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-admin__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.injury-admin__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.injury-admin__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+}
+
+.injury-admin__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.injury-admin__section {
+  padding: 28px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: injury-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-admin__section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.injury-admin__section-title svg {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.injury-admin__section-desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+/* ===== 专家组功能 ===== */
+.injury-expert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: injury-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-expert__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.injury-expert__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.injury-expert__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+}
+
+.injury-expert__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.injury-expert__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 28px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: injury-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-expert__icon {
+  font-size: 36px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.injury-expert__title {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.injury-expert__desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+/* ===== 系统部署 ===== */
+.injury-deploy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  max-width: 1200px;
+  padding: 0 40px;
+  animation: injury-fade-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-deploy__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.injury-deploy__label {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.injury-deploy__subtitle {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+}
+
+.injury-deploy__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.injury-deploy__feature {
+  padding: 28px;
+  background: var(--surface-1);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+  animation: injury-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-deploy__feature-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.injury-deploy__feature-title svg {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.injury-deploy__feature-desc {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.injury-deploy__ai {
+  padding: 28px;
+  background: var(--surface-1);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  animation: injury-item-in 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.injury-deploy__ai-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.injury-deploy__ai-title svg {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.injury-deploy__ai-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.injury-deploy__ai-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-2);
+}
+
+.injury-deploy__ai-label {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.injury-deploy__ai-note {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-mute);
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+
+/* ===== Animations ===== */
+@keyframes injury-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes injury-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

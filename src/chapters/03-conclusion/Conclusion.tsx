@@ -20,11 +20,10 @@ const Conclusion: React.FC<ConclusionProps> = ({ step }) => {
           <div className="conclusion__label">致谢</div>
           <div className="conclusion__thanks">谢谢大家</div>
           <div className="conclusion__ai-note">
-            本视频由AI生成
+            {/* 本视频由AI生成 */}
+            本次讲解内容由AI生成
           </div>
-          <div className="conclusion__details">
-            赤峰人社 · AI应用实践
-          </div>
+          <div className="conclusion__details">赤峰人社 · AI应用实践</div>
         </div>
       )}
     </div>
