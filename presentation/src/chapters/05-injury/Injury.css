@@ -69,7 +69,7 @@
 
 .injury-overview__desc {
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 28px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -139,7 +139,7 @@
 
 .injury-admin__section-desc {
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 26px;
   color: var(--text-2);
   line-height: 1.5;
 }
@@ -209,7 +209,7 @@
 
 .injury-expert__desc {
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 26px;
   color: var(--text-2);
   line-height: 1.5;
 }
@@ -278,7 +278,7 @@
 
 .injury-deploy__feature-desc {
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 26px;
   color: var(--text-2);
   line-height: 1.5;
 }
@@ -319,7 +319,7 @@
   flex-direction: column;
   gap: 4px;
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 26px;
   color: var(--text-2);
 }
 
@@ -330,7 +330,7 @@
 
 .injury-deploy__ai-note {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-mute);
   padding-top: 12px;
   border-top: 1px solid var(--rule);

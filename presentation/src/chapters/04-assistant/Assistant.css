@@ -190,7 +190,7 @@
 
 .assistant-preaudit-pain__title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -198,7 +198,7 @@
 
 .assistant-preaudit-pain__desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -276,7 +276,7 @@
 
 .assistant-preaudit-ai__title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -284,7 +284,7 @@
 
 .assistant-preaudit-ai__desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -346,7 +346,7 @@
 .assistant-preaudit-compare__cell {
   padding: 16px 20px;
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 26px;
   color: var(--text-2);
   border-bottom: 1px solid var(--rule);
 }
@@ -403,14 +403,14 @@
 
 .assistant-preaudit-compare__value-item-title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
 }
 
 .assistant-preaudit-compare__value-item-desc {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-2);
   line-height: 1.5;
 }
@@ -487,7 +487,7 @@
 
 .assistant-pension-pain__title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -495,7 +495,7 @@
 
 .assistant-pension-pain__desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -557,7 +557,7 @@
 
 .assistant-pension-content__title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -565,7 +565,7 @@
 
 .assistant-pension-content__desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -610,14 +610,14 @@
 
 .assistant-pension-content__value-item-title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
 }
 
 .assistant-pension-content__value-item-desc {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-2);
   line-height: 1.5;
 }
@@ -685,7 +685,7 @@
 
 .assistant-handover-pain__title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -693,7 +693,7 @@
 
 .assistant-handover-pain__desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -772,7 +772,7 @@
 
 .assistant-handover-flow__title {
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -780,7 +780,7 @@
 
 .assistant-handover-flow__desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -813,7 +813,7 @@
 
 .assistant-handover-flow__stat-label {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-2);
   text-align: center;
 }
@@ -909,7 +909,7 @@
 
 .assistant-retire-solution__title {
   font-family: var(--font-body);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--text);
   text-align: center;
@@ -917,7 +917,7 @@
 
 .assistant-retire-solution__desc {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 26px;
   color: var(--text-2);
   text-align: center;
   line-height: 1.5;
@@ -1010,7 +1010,7 @@
   align-items: flex-start;
   gap: 12px;
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-2);
   line-height: 1.5;
 }
@@ -1032,7 +1032,7 @@
 
 .assistant-calc__solution-desc {
   font-family: var(--font-body);
-  font-size: 22px;
+  font-size: 26px;
   color: var(--text-2);
   margin-bottom: 20px;
 }
@@ -1057,14 +1057,14 @@
 
 .assistant-calc__feature-title {
   font-family: var(--font-body);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text);
 }
 
 .assistant-calc__feature-desc {
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-2);
   line-height: 1.5;
 }
